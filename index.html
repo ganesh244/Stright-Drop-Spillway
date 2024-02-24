@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Straight Drop Spillway Calculator</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <h1>Straight Drop Spillway Calculator</h1>
+    <form id="spillwayForm">
+        <label for="c">Coefficient of Runoff:</label>
+        <input type="number" id="c" step="0.01" required><br>
+
+        <label for="i">Rainfall Intensity (cm/hr):</label>
+        <input type="number" id="i" step="0.01" required><br>
+
+        <label for="A">Catchment Area (hectares):</label>
+        <input type="number" id="A" step="0.01" required><br>
+
+        <label for="f">Drop of Bed (meters):</label>
+        <input type="number" id="f" step="0.01" required><br>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <div id="result" style="display: none;">
+        <h2>Results</h2>
+        <p>Runoff collected from catchment area (Qg): <span id="Qg"></span> cubic meters per second</p>
+        <p>Height (meters): <span id="h"></span></p>
+        <p>Minimum length of Head wall extensions (meters): <span id="E"></span></p>
+        <p>Length of basin (meters): <span id="Lb"></span></p>
+        <p>Height of Longitudinal Wall (meters): <span id="S"></span></p>
+        <p>Height of Wing Wall and side wall at junction (meters): <span id="J"></span></p>
+        <p>Height of end sill and transverse sill (meters): <span id="Ht"></span></p>
+        <p>Components M (meters): <span id="M"></span></p>
+        <p>Components K (meters): <span id="K"></span></p>
+    </div>
+
+    <script src="./Stright drop.js"></script>
+</body>
+</html>
